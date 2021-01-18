@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.container-form-prices{
+    
+    position: left;
+    align-items: center;
+    justify-items: center;
+    
+    margin: auto auto;
+
+    width: 25%;
+    height: 50%;
+    background-color: #f2f2f2;
+    border: 1px solid #ffffff;
+    border-radius: 1%;
+    box-shadow: 1px 1px 7px #444444;
+    color: #999;
+
+    > select {
+
+        margin: 0px auto;
+        top: 10%;
+        height: 5%;
+        cursor: pointer;
+        background: transparent;
+        border: 1px solid #dddddd;
+        color: rgb(80, 79, 79);
+
+    }
+    .SL-div {
+        margin: 20px 50px;
+    }
+    .label-select { 
+
+        margin-right: 5%;
+
+    }
+
+
+    > input {
+        height: 5%;
+        padding-left: 5%;
+        margin: 10px 10px;
+        bottom: 10%;
+        left: 10%;
+        background: #dadada;
+        border: 1px solid #dddddd;
+        color: #ffffff;
+    }
+
+    > button {
+        
+        margin: 20px 50px;
+        padding: 10px 10px;
+        box-shadow: 1px 1px 7px #444444;
+        width: auto;
+        height: 5%;
+        background: #e76903;
+        border-radius: 1%;
+        border: 1px solid #dddddd;
+        color: #ffffff;
+
+        transition: all .5s ease-out;
+
+        &:hover {
+            background: #853c00;
+
+        }
+    }
+}
+
+> h2 {
+    position: relative;
+    left: 40%;
+    top: 5%;
+    color: #ffffff;
+}

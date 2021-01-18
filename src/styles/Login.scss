@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    --primary: #0658a5;
+    --secondary: #5a93c7;
+    --tertiary: #34495e;
+}
+
+.form-box{
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: 
+            linear-gradient(var(--primary), transparent),
+            linear-gradient(90deg, var(--secondary), transparent),
+            linear-gradient(-90deg, var(--tertiary), transparent)
+        ;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+.button-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    border-radius: 30px;
+}
+
+.toggle-btn{
+    color: #ffffff;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+.custom-btn-slide {
+
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    border-radius: 30px;
+
+    transition: .5s;
+
+    &.right {
+        left: 110px;
+        background: linear-gradient(to left, var(--primary), var(--secondary));
+    }
+
+    &.left {
+        left: 0;
+    }
+}
+
+.social-icons{
+    margin: 15px auto;
+    text-align: center;
+}
+
+.social-icons img{
+    width: 40px;
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.input-group{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;  
+    
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border: 0;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+    ::placeholder {
+        color: #ffffff;
+    }
+}
+
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    color: #ffffff;
+}
+
+.check-box{
+    margin: 30px 10px 30px 0;
+}
+
+.span-custom{
+    color: #ffffff;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+
+#login{
+    left: 10%;
+    
+    &.hide{
+        left: -50%;
+    }
+}
+
+#register{
+    left: 10%;
+
+    &.hide{
+        left: 100%;
+    }
+}
+
+.btn-action-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+    height: 10%;
+    position: absolute;
+    bottom: 2%;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    z-index: 1;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+
+    cursor: pointer;
+    box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.281);
+    transition: all .2s ease-in-out;
+
+    .text {
+        font-size: 12px;
+        color: #fff;
+        margin: 1em;
+    }
+
+    &:active{
+        transform: scale(0.95);
+    }
+
+    &.right {
+        right: -15%;
+        align-items: flex-end;
+        &:hover {
+            background: linear-gradient(to left, #0658a5,#5a93c7);
+            right: -20%;
+        }
+    }
+
+    &.left {
+        right: -115%;
+        align-items: flex-end;
+        background: linear-gradient(to left, #0658a5,#5a93c7);
+        &:hover {
+            right: -120%;
+        }
+    }
+}
+
+.slide-form-checkbox{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: 
+            linear-gradient(var(--primary), transparent),
+            linear-gradient(-90deg, var(--secondary), transparent),
+            linear-gradient(90deg, var(--tertiary), transparent)
+        ;
+    border-radius: 10px;
+    right: -100%;
+    transition: all .2s ease-in-out;
+
+    .checkbox {
+        margin: 0 5px 0 5px;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        justify-content: center;
+        color: #ffffff;
+        row-gap: 1em;
+        column-gap: 1em;
+
+        > h2 {
+            margin: 5% 0 5% 0;
+            grid-column: span 6;
+            text-align: center;
+            font-size: 20px;
+        }
+        > h1 {
+            grid-column: span 6;
+            font-size: 15px;
+        }
+
+        > label {
+            grid-column: span 1;
+            position: relative;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        > input {
+            border: 1px solid #ffffff;
+            grid-column: span 1;
+            position: relative;
+        }
+    }
+
+    &.hide {
+        right: 0;
+        opacity: 0;
+        z-index: -1;
+    }
+}

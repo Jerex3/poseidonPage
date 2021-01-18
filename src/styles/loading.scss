@@ -1,0 +1,180 @@
+body {
+
+    background:#34495e;
+    height:100vh;
+    
+    
+}
+//LOADING MAIN
+
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.footer-button {
+
+    display: relative;
+    background: #ffffff;
+    transition: all 1.2s ease-in-out;
+    
+    > button {
+        position: absolute;
+        transform: scale(1.2);
+        right: 15%;
+        bottom: 10%;
+        background: #ffffff;
+        box-shadow: inset 0 0 15px 0 #e67e22;
+    }
+}
+
+.loading {
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-top: 10px solid #e74c3c;
+    position: relative;
+    animation: a1 2s linear infinite;
+    margin-top: 10%;
+}
+
+.loading::before,.loading::after {
+     content: "";
+     width: 200px;
+     height: 200px;
+     position: absolute;
+     left: 0;
+     top:-10px;
+     box-sizing: border-box;
+     border-radius: 50%;
+
+}
+
+.loading::before {
+    border-top: 10px solid #e67e22;
+    transform: rotate(120deg);
+}
+ 
+
+.loading::after {
+    border-top: 10px solid #3498db;
+    transform: rotate(240deg);
+}
+
+.loading span {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 200px;
+    animation: a2 2s linear infinite;
+}
+
+@keyframes a1 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes a2 {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+// LOADING BALLS
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container-balls {
+    
+    position: absolute;
+    height: 50px;
+    width: 135px;
+    
+    margin: 2% auto auto 7%;
+    text-align: center;
+}
+
+div div.ball {
+    position: relative;
+
+    width: 10px;
+    height: 10px;
+
+    display: inline-block;
+    margin: 5px;
+    border-radius: 50%;
+    z-index: 999;
+}
+
+.shadow {
+    position: relative;
+
+    width: 10px;
+    height: 5px;
+
+    opacity: .1;
+    bottom: 20px;
+    border-radius: 50%;
+    background-color: black;
+    display: inline-block;
+    margin: 5px;
+}
+
+.ball-one {
+    background-color: #FFCE64;
+    animation: jump .5s ease 0s infinite alternate;
+}
+
+.ball-two {
+    background-color: #4BB3EF;
+    animation: jump .5s ease .15s infinite alternate;
+}
+
+.ball-three {
+    background-color: #63DD79;
+    animation: jump .5s ease .25s infinite alternate;
+}
+
+.ball-four {
+    background-color: #FD6C6C;
+    animation: jump .5s ease .35s infinite alternate;
+}
+
+.shadow-one {
+    animation: shrink .5s ease .0s infinite alternate;
+}
+
+.shadow-two {
+    animation: shrink .5s ease .15s infinite alternate;
+}
+
+.shadow-three {
+    animation: shrink .5s ease .25s infinite alternate;
+}
+
+.shadow-four {
+    animation: shrink .5s ease .35s infinite alternate;
+}
+
+@keyframes jump {
+    0% {transform: scaleY(.8);}
+    100% {
+        transform: translateY(-20px);
+    }   
+}
+
+@keyframes shrink {
+    100% {
+        transform: scaleX(.5);
+        opacity: .01;
+    }    
+}
