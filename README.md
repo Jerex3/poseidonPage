@@ -10,7 +10,7 @@ Realizado por Jeremias Manuel Eliseo y Agustin Isaac Vera Massa
 ------------
 #### Como instalar
 + Luego de haber clonado el proyecto
-+ Ubicarse en la carpeta `VistaPoseidon/Frontend`
++ Ubicarse en la carpeta
 + Ejecutar comandos
   + `$ npm install` para instalar todas las dependencias
   + `$ npm run webpack:dev:server` para abrir la app
